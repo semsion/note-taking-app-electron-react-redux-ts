@@ -41,3 +41,12 @@ To run the test suite using Jest:
 
    ```
 
+### Troubleshooting
+If you receive any errors such as `The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now`, you may need to run the following:
+   ```bash
+   sudo chown root <path-to-cloned-repository>/note-taking-app-electron-react-redux-ts/node_modules/electron/dist/chrome-sandbox
+   sudo chmod 4755 <path-to-cloned-repository>/note-taking-app-electron-react-redux-ts/node_modules/electron/dist/chrome-sandbox
+
+   ```
+
+
